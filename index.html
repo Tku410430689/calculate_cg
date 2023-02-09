@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        Calculate the Center of gravity<br>
+        Na=<input id="Na" type="text" />(kg)<br>
+        Nb=<input id="Nb" type="text" />(kg)<br>
+        N2=<input id="N2" type="text" />(kg)<br>
+        a =<input id="a" type="text" />(cm)<br>
+        b =<input id="b" type="text" />(cm)<br>
+        x
+        <button onclick="calculate()" >＝</button>
+        <script>
+                function calculate() {
+                    var Na = parseFloat(document.getElementById('Na').value);
+                    var Nb = parseFloat(document.getElementById('Nb').value);
+                    var N2 = parseFloat(document.getElementById('N2').value);
+                    var a = parseFloat(document.getElementById('a').value);
+                    var b = parseFloat(document.getElementById('b').value);
+                    document.getElementById('result').value =  ((Na+Nb)*b-N2*a)/(Na+Nb+N2) ;
+                }
+        </script>
+        <output id="result"></output>(cm)
+    </body>
+</html>
