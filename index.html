@@ -11,23 +11,30 @@
         Na=<input id="Na" type="text" />(kg)<br>
         Nb=<input id="Nb" type="text" />(kg)<br>
         N2=<input id="N2" type="text" />(kg)<br>
-        a =<input id="a" type="text" />(cm)<br>
-        b =<input id="b" type="text" />(cm)<br>
+        <label for="stellar"></label>
+        <input type="radio" name="airplane" value="0" id="0" checked>stellar
+        <label for="titan"></label>
+        <input type="radio" name="airplane" value="1" id="1">titan<br>
         x
         <button onclick="calculate()" >＝</button>
+        <script src="http://code.jquery.com/jquery.min.js"></script>
         <script>
-                function calculate() {
-                    var Na = parseFloat(document.getElementById('Na').value);
-                    var Nb = parseFloat(document.getElementById('Nb').value);
-                    var N2 = parseFloat(document.getElementById('N2').value);
-                    var a = parseFloat(document.getElementById('a').value);
-                    var b = parseFloat(document.getElementById('b').value);
-                    document.getElementById('result').value =  ((Na+Nb)*b-N2*a)/(Na+Nb+N2) ;
-                }
+            function calculate() {
+                var a_array=[37.799,37.799];
+                var b_array=[10.65,10.65];
+                var i=$("input:radio[name=airplane]:checked").val()
+                a=a_array[i];
+                b=b_array[i];
+                var Na = parseFloat(document.getElementById('Na').value);
+                var Nb = parseFloat(document.getElementById('Nb').value);
+                var N2 = parseFloat(document.getElementById('N2').value);
+                document.getElementById('result').value =  ((Na+Nb)*b-N2*a)/(Na+Nb+N2) ;
+            }
+
         </script>
-        <output id="result"></output>(cm)
+        <output id="result"></output>(cm)<br>
         <div class="content">
-            <img src="https://pic3.zhimg.com/v2-36e59d6f32d9041fc8b0d290dffccdc6_b.webp" width="40%" style="display:block; margin:auto;"/>
+            <img src="https://pic3.zhimg.com/v2-36e59d6f32d9041fc8b0d290dffccdc6_b.webp" width="20%" style="display:block; margin:auto;"/>
         </div>
         
     </body>
