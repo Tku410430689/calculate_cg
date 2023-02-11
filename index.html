@@ -17,12 +17,11 @@
         <input type="radio" name="airplane" value="1" id="1">titan<br>
         x
         <button onclick="calculate()" >＝</button>
-        <script src="http://code.jquery.com/jquery.min.js"></script>
         <script>
             function calculate() {
                 var a_array=[37.799,37.799];
                 var b_array=[10.65,10.65];
-                var i=$("input:radio[name=airplane]:checked").val();
+                var i=document.querySelector('input[name="airplane"]:checked').value;
                 a=a_array[i];
                 b=b_array[i];
                 var Na = parseFloat(document.getElementById('Na').value);
