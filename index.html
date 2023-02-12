@@ -1,3 +1,22 @@
+<script>
+    
+    document.body.onkeydown = function(e){
+        var keyCode = e.keyCode || e.which || e.charCode;
+        var ctrlKey = e.ctrlKey || e.metaKey;
+        if(ctrlKey && (keyCode == 83 || keyCode == 85 || keyCode == 73)) {
+            e.preventDefault();
+            return false;
+        }else if(keyCode && keyCode == 123){
+            return false;
+        }
+    }
+</script>
+<script>
+    document.oncontextmenu = function (){
+        return false;
+    }
+</script>
+<noscript><p style="font-size:70px;">對不起，你的瀏覽器不支持或禁用了JavaScript，無法正常使用此網站</p></noscript>
 <html>
     <head>
         <meta charset="UTF-8">
@@ -9,8 +28,9 @@
     <body>
         
         <p align="center">
-        <th colspan="2" align="center" scope="col"><a class="s2" href="http://www.tku.edu.tw/" target="new">淡江大學首頁</a> 　<a class="s2" href="http://www.engineering.tku.edu.tw/main.php" target="new">工學院首頁</a> 　<a class="s2"  href="../INDEX.html" target="_top">航太系首頁</a></th>
+        <th colspan="2" align="center" scope="col"><a class="s2" href="http://www.tku.edu.tw/" target="new">淡江大學首頁</a> 　<a class="s2" href="http://www.engineering.tku.edu.tw/main.php" target="new">工學院首頁</a> 　<a class="s2"  href="http://www.aero.tku.edu.tw/INDEX.html" target="_top">航太系首頁</a></th>
               </tr><br>
+              
         Calculate the Center of gravity<br>
         Na=<input id="Na" type="text" />(kg)<br>
         Nb=<input id="Nb" type="text" />(kg)<br>
