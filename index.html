@@ -44,9 +44,9 @@
         </style>
         <p align="center">
         Calculate the Center of gravity<br>
-        Na=<input id="Na" type="text" />(kg)<br>
-        Nb=<input id="Nb" type="text" />(kg)<br>
-        N2=<input id="N2" type="text" />(kg)<br>
+        Na = <input id="Na" type="text" />(kg)<br>
+        Nb = <input id="Nb" type="text" />(kg)<br>
+        N2 = <input id="N2" type="text" />(kg)<br>
         <label for="stellar"></label>
         <input type="radio" name="airplane" value="0" id="0" checked>stellar
         <label for="titan"></label>
@@ -67,9 +67,32 @@
                 document.getElementById('result').value =  ((Na+Nb)*b-N2*a)/(Na+Nb+N2) ;
             }
         </script>
-        <output id="result"></output>(cm)<br>
+        <tr>
+        <td>
+        deviation = <input id="result" size="8" value="     " />(cm)</td>
+        </tr>
         <div class="content">
             <img src="https://pic3.zhimg.com/v2-36e59d6f32d9041fc8b0d290dffccdc6_b.webp" width="20%" style="display:block; margin:auto;"/>
         </div>
+        <div class="style1" id="LayoutDiv5">
+            <table width="100%" border="0" align="center" cellpadding="1" cellspacing="1">
+              <tr>
+                <th height="37" colspan="4" align="left" valign="top" scope="row"><table width="95%" border="0" align="center" cellpadding="1" cellspacing="1">
+                  <tr>
+                    <th class="style1" scope="col"><p class="style0">Copyright &nbsp;&copy;&nbsp; Unmanned Aerial Vehicle Laboratory of the Dept. of Aerospace Engineering, Tamkang University
+                      Room E110<br>
+                      1F, Engineering Building, No.151, Yingzhuan Rd.
+                      Tamsui Dist., New Taipei City 251301
+                      Taiwan (R.O.C.)&nbsp;<br>
+                      <strong>Tel:</strong>+886 - 2- 2621-5656 ext.2617, <strong>Fax:</strong>+886 - 2- 2620-9746, E-mail： tenx@oa.tku.edu.tw </p>
+                      <p class="style0"></p>
+                      <p class="style0"></p>              <p class="style0">&nbsp;</p></th>
+                    </tr>
+                </table></th>
+              </tr>
+            </table>
+          </div>
+          </table>
+        </div>
     </body>
-</html>
+</html> 
