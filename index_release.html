@@ -1,0 +1,88 @@
+<script>
+    
+    document.body.onkeydown = function(e){
+        var keyCode = e.keyCode || e.which || e.charCode;
+        var ctrlKey = e.ctrlKey || e.metaKey;
+        if(ctrlKey && (keyCode == 83 || keyCode == 85 || keyCode == 73)) {
+            e.preventDefault();
+            return false;
+        }else if(keyCode && keyCode == 123){
+            return false;
+        }
+    }
+</script>
+<script>
+    document.oncontextmenu = function (){
+        return false;
+    }
+</script>
+<noscript><p style="font-size:70px;">對不起，你的瀏覽器不支持或禁用了JavaScript，無法正常使用此網站</p></noscript>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Calculate the Center of gravity</title>
+        <link rel="icon" type="image/x-icon" href="https://s10.aconvert.com/convert/p3r68-cdx67/au966-4lcbf-001.ico">
+    </head>
+    <body>
+        <style type="text/css">
+        td {font-size:14px;}
+        input {font-size:12px;}
+        select {font-size:12px;}
+        button {font-size:12px;}
+
+        body {
+            background-color: #000000;
+            margin-left: 0px;
+            margin-top: 0px;
+            margin-right: 0px;
+            margin-bottom: 0px;
+            background-image: url(images/mm_bg_blue.gif);
+        }
+        </style>
+        <font color="#FFFFFF">
+        <p align="center">
+        Calculate the Center of gravity<br>
+        Na = <input id="Na" type="text" />(kg)<br>
+        Nb = <input id="Nb" type="text" />(kg)<br>
+        N2 = <input id="N2" type="text" />(kg)<br>
+        <label for="stellar"></label>
+        <input type="radio" name="airplane" value="0" id="0" checked>stellar
+        <label for="titan"></label>
+        <input type="radio" name="airplane" value="1" id="1">titan
+        <label for="ymahow"></label>
+        <input type="radio" name="airplane" value="2" id="2">ymahow<br>
+        <button onclick="calculate()" >Calculate</button><br>
+        <script>
+            function calculate() {
+                var a_array=[37.799,64.57,1];///the distance to the nose gear
+                var b_array=[10.65,11.69,1];///the distance to the main gear
+                var i=document.querySelector('input[name="airplane"]:checked').value;
+                a=a_array[i];
+                b=b_array[i];
+                var Na = parseFloat(document.getElementById('Na').value);
+                var Nb = parseFloat(document.getElementById('Nb').value);
+                var N2 = parseFloat(document.getElementById('N2').value);
+                document.getElementById('result').value =  ((Na+Nb)*b-N2*a)/(Na+Nb+N2) ;
+            }
+        </script>
+        <tr>
+        <td>
+        deviation = <input id="result" size="8" value="     " />(cm)</td>
+        </tr>
+        <div class="content">
+            <img src="https://pic3.zhimg.com/v2-36e59d6f32d9041fc8b0d290dffccdc6_b.webp" width="20%" style="display:block; margin:auto;"/>
+        </div>
+        <p align="center">
+        Copyright &nbsp;&copy;&nbsp; Unmanned Aerial Vehicle Laboratory of the Dept. of Aerospace Engineering, Tamkang University Room E110<br>
+        1F, Engineering Building, No.151, Yingzhuan Rd. Tamsui Dist., New Taipei City 251301 Taiwan (R.O.C.)&nbsp;<br>
+        Tel:+886 - 2- 2621-5656 ext.2617, Fax:+886 - 2- 2620-9746, E-mail： tenx@oa.tku.edu.tw </p>
+        <div class="content">
+            <a href="https://www.instagram.com/_tkuuavlab_/" target="new"><img src="UAVlab_mark.gif" width="25%" style="display:block; margin:auto;"/>
+        </div>
+          </table>
+        </div>
+        </font>
+    </body>
+</html> 
