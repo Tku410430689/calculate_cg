@@ -208,6 +208,14 @@
     }
 
     /* Additional CSS for responsiveness */
+    @media (max-width: 600px) {
+      .form-structor {
+        height: auto;
+        width: 90%;
+        max-width: 350px;
+      }
+    }
+
     @media (max-width: 400px) {
       .form-structor {
         width: 90%;
@@ -220,6 +228,9 @@
       }
     }
   </style>
+  <script>
+  window.console = window.console || function(t) {};
+</script>
 
   <!-- Rest of the code remains the same -->
 
@@ -240,19 +251,19 @@
   </div>
 
   <script>
-    function login() {
-      const username = document.getElementById('username').value;
-      const password = document.getElementById('password').value;
+      function login() {
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
 
-      // 在這裡你可以發送請求到後端進行帳號和密碼的驗證
-      // 這裡僅是示範，實際的驗證需要使用後端的語言和資料庫
-      if (username === 'UAVlab' && password === '37300900') {
-        window.location.href = 'index_release.html';
-      } else {
-        alert('帳號或密碼錯誤！');
+        // 在這裡你可以發送請求到後端進行帳號和密碼的驗證
+        // 這裡僅是示範，實際的驗證需要使用後端的語言和資料庫
+        if (username === 'UAVlab' && password === '37300900') {
+          window.location.href = 'index_release.html';
+        } else {
+          alert('帳號或密碼錯誤！');
+        }
       }
-    }
-  </script>
+    </script>
 </body>
 
 </html>
