@@ -23,14 +23,12 @@
 <head>
   <meta charset="UTF-8">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-
   <link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
   <meta name="apple-mobile-web-app-title" content="CodePen">
   <link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
   <link rel="mask-icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-b4b4269c16397ad2f0f7a01bcdf513a1994f4c94b8af2f191c09eb0d601762b1.svg" color="#111" />
 
-  <title>CodePen - login/signup form animation</title>
+  <title>UAVlab</title>
   <link rel="canonical" href="https://codepen.io/shayanea/pen/eVMMgO">
 
   <style>
@@ -206,33 +204,11 @@
       visibility: visible;
       -webkit-transition: all 0.3s ease;
     }
-
-    /* Additional CSS for responsiveness */
-    @media (max-width: 600px) {
-      .form-structor {
-        height: auto;
-        width: 90%;
-        max-width: 350px;
-      }
-    }
-
-    @media (max-width: 400px) {
-      .form-structor {
-        width: 90%;
-      }
-    }
-
-    @media (max-width: 320px) {
-      .form-structor {
-        height: 450px;
-      }
-    }
   </style>
-  <script>
-  window.console = window.console || function(t) {};
-</script>
 
-  <!-- Rest of the code remains the same -->
+  <script>
+    window.console = window.console || function(t) {};
+  </script>
 
 </head>
 
@@ -251,19 +227,19 @@
   </div>
 
   <script>
-      function login() {
-        const username = document.getElementById('username').value;
-        const password = document.getElementById('password').value;
+    function login() {
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
 
-        // 在這裡你可以發送請求到後端進行帳號和密碼的驗證
-        // 這裡僅是示範，實際的驗證需要使用後端的語言和資料庫
-        if (username === 'UAVlab' && password === '37300900') {
-          window.location.href = 'index_release.html';
-        } else {
-          alert('帳號或密碼錯誤！');
-        }
+      // 在這裡你可以發送請求到後端進行帳號和密碼的驗證
+      // 這裡僅是示範，實際的驗證需要使用後端的語言和資料庫
+      if (username === 'UAVlab' && password === '37300900') {
+        window.location.href = 'index_release.html';
+      } else {
+        alert('帳號或密碼錯誤！');
       }
-    </script>
+    }
+  </script>
 </body>
 
 </html>
